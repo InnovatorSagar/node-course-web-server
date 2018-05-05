@@ -32,7 +32,7 @@ app.use(express.static(__dirname+'/public'));
 app.get('/',(req,res)=>{
   //res.send('<b>Hello Express!</b>');
   res.render('home.hbs',{
-    welcomeMessage:'Welcome to my first Website!!',
+    welcomeMessage:'Sagar loves Shubhangi!! & Shubhangi loves Sagar!!',
     pageTitle: 'Home Page',
     currentYear : new Date().getFullYear()
   });
