@@ -32,13 +32,18 @@ app.use(express.static(__dirname+'/public'));
 app.get('/',(req,res)=>{
   //res.send('<b>Hello Express!</b>');
   res.render('home.hbs',{
-    welcomeMessage:'Sagar loves Shubhangi!! & Shubhangi loves Sagar!!',
+    welcomeMessage:'Welcome to my Website',
     pageTitle: 'Home Page',
     currentYear : new Date().getFullYear()
   });
 });
 app.set('view engine','hbs');
 
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    porfolio:'These are the projects'
+  });
+});
 app.get('/about',(req,res)=>{
   res.render('about.hbs',{
     pageTitle: 'About Page',
